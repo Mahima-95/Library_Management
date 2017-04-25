@@ -7,7 +7,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
-import com.library.pojo.Library;
+import com.library.entity.Library;
 
 @Component
 public class LibraryMapper {

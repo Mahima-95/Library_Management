@@ -1,7 +1,8 @@
 package com.library.dao;
 
 import java.util.List;
-import com.library.pojo.Library;
+
+import com.library.entity.Library;
 
 public interface LibraryDao {
 

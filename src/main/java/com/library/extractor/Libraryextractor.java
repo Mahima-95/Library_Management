@@ -8,7 +8,7 @@ import java.util.List;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ResultSetExtractor;
 
-import com.library.pojo.Library;
+import com.library.entity.Library;
 
 public class Libraryextractor implements ResultSetExtractor<List<Library>> {
 

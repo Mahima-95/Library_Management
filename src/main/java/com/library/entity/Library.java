@@ -1,4 +1,4 @@
-package com.library.pojo;
+package com.library.entity;
 
 public class Library {
 	private String bookName;

@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.library.entity.Library;
 import com.library.mappers.LibraryMapper;
-import com.library.pojo.Library;
 import com.library.service.LibraryService;
 
 @RestController
