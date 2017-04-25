@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.library.mappers.LibraryMapper;
 import com.library.pojo.Library;
 import com.library.service.LibraryService;
 
@@ -20,6 +21,9 @@ public class LibraryController {
 	@Autowired
 	private LibraryService libraryService;
 
+	@Autowired
+	private LibraryMapper libraryMapper;
+	
 	@RequestMapping(value = "/addBooks", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public String addBooks(@RequestBody Library library) {
 		return libraryService.addBooks(library);
@@ -37,7 +41,7 @@ public class LibraryController {
 	
 	@RequestMapping(value = "/getBooks/{bookId}", method = RequestMethod.GET)
 	public List<Library> getBooks(@PathVariable Integer bookId) {
-		return libraryService.getBooks();
+		return libraryMapper.mapLibrary(libraryService.getBooks());
 	}
 
 }
