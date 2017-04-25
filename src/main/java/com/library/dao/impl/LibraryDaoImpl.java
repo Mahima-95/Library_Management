@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.util.StringUtils;
 
 import com.library.dao.LibraryDao;
+import com.library.extractor.Libraryextractor;
 import com.library.pojo.Library;
 
 @Repository
@@ -58,20 +59,24 @@ public class LibraryDaoImpl implements LibraryDao {
 	public String deleteBooks(int bookId) {
 		String response = null;
 		if (!StringUtils.isEmpty(bookId)) {
-		Object[] args = { bookId };
-		int res = jdbcTemplate.update("delete from library where bookId=?", args);
-		if (res > 0) {
-			response = "Succesfully updated..!!!";
+			Object[] args = { bookId };
+			int res = jdbcTemplate.update("delete from library where bookId=?",
+					args);
+			if (res > 0) {
+				response = "Succesfully deleted..!!!";
+			}
+		} else {
+			response = "Please try again later..!!!";
 		}
-	} else {
-		response = "Please try again later..!!!";
-	}
-	return response;
+		return response;
 	}
 
 	@Override
 	public List<Library> getBooks() {
-		return null;
+
+		List<Library> res = jdbcTemplate.query("select * from library",
+				new Libraryextractor());
+		return res;
 	}
 
 }
