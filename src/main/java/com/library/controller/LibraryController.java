@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.library.entity.Library;
+import com.library.factory.LibraryFactory;
 import com.library.mappers.LibraryMapper;
 import com.library.service.LibraryService;
 
@@ -18,30 +19,33 @@ import com.library.service.LibraryService;
 @RequestMapping("/library")
 public class LibraryController {
 
-	@Autowired
-	private LibraryService libraryService;
+//	@Autowired
+//	private LibraryService libraryService;
 
 	@Autowired
 	private LibraryMapper libraryMapper;
-	
+
+	@Autowired
+	private LibraryFactory libraryFactory;
+
 	@RequestMapping(value = "/addBooks", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public String addBooks(@RequestBody Library library) {
-		return libraryService.addBooks(library);
+		return libraryFactory.getLibraryService().addBooks(library);
 	}
 
 	@RequestMapping(value = "/updateBooks", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public String updateBooks(@RequestBody Library library) {
-		return libraryService.updateBooks(library);
+		return libraryFactory.getLibraryService().updateBooks(library);
 	}
 
 	@RequestMapping(value = "/deleteBooks/{bookId}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public String deleteBooks(@PathVariable Integer bookId) {
-		return libraryService.deleteBooks(bookId);
+		return libraryFactory.getLibraryService().deleteBooks(bookId);
 	}
-	
+
 	@RequestMapping(value = "/getBooks/{bookId}", method = RequestMethod.GET)
 	public List<Library> getBooks(@PathVariable Integer bookId) {
-		return libraryMapper.mapLibrary(libraryService.getBooks());
+		return libraryMapper.mapLibrary(libraryFactory.getLibraryService().getBooks());
 	}
 
 }

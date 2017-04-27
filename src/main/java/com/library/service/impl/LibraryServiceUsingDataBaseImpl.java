@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 
 import com.library.dao.LibraryDao;
 import com.library.entity.Library;
+import com.library.enums.LibraryEnum;
 import com.library.service.LibraryService;
 
 @Service
-public class LibraryServiceImpl implements LibraryService {
+public class LibraryServiceUsingDataBaseImpl implements LibraryService {
 
 	@Autowired
 	private LibraryDao libraryDao;
@@ -33,6 +34,11 @@ public class LibraryServiceImpl implements LibraryService {
 	@Override
 	public List<Library> getBooks() {
 		return libraryDao.getBooks();
+	}
+
+	@Override
+	public LibraryEnum getEnum() {
+		return LibraryEnum.DIRECT_DATABASE;
 	}
 
 }
