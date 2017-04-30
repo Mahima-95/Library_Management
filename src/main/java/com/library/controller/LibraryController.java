@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.library.entity.Library;
 import com.library.factory.LibraryFactory;
 import com.library.mappers.LibraryMapper;
-import com.library.service.LibraryService;
+import com.library.response.LibraryResponse;
 
 @RestController
 @RequestMapping("/library")
 public class LibraryController {
 
-//	@Autowired
-//	private LibraryService libraryService;
+	// @Autowired
+	// private LibraryService libraryService;
 
 	@Autowired
 	private LibraryMapper libraryMapper;
@@ -29,18 +29,18 @@ public class LibraryController {
 	private LibraryFactory libraryFactory;
 
 	@RequestMapping(value = "/addBooks", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public String addBooks(@RequestBody Library library) {
-		return libraryFactory.getLibraryService().addBooks(library);
+	public LibraryResponse addBooks(@RequestBody Library library) {
+		return new LibraryResponse(libraryFactory.getLibraryService().addBooks(library));
 	}
 
-	@RequestMapping(value = "/updateBooks", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public String updateBooks(@RequestBody Library library) {
-		return libraryFactory.getLibraryService().updateBooks(library);
+	@RequestMapping(value = "/updateBooks", method = RequestMethod.PUT, produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public LibraryResponse updateBooks(@RequestBody Library library) {
+		return new LibraryResponse(libraryFactory.getLibraryService().updateBooks(library));
 	}
 
 	@RequestMapping(value = "/deleteBooks/{bookId}", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
-	public String deleteBooks(@PathVariable Integer bookId) {
-		return libraryFactory.getLibraryService().deleteBooks(bookId);
+	public LibraryResponse deleteBooks(@PathVariable Integer bookId) {
+		return new LibraryResponse(libraryFactory.getLibraryService().deleteBooks(bookId));
 	}
 
 	@RequestMapping(value = "/getBooks/{bookId}", method = RequestMethod.GET)

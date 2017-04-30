@@ -22,7 +22,7 @@ public class LibraryDaoImpl implements LibraryDao {
 	public String addBooks(Library library) {
 		String response = null;
 		if (!StringUtils.isEmpty(library)) {
-			Object[] args = { library.getBookId(), library.getBookName(), library.getBookMessage() };
+			Object[] args = { library.getBookName(), library.getBookMessage() };
 			int res = jdbcTemplate.update(QueryConstants.ADDBOOKS, args);
 			if (res > 0) {
 				response = "Successfully added..!!!";

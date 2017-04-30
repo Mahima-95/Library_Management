@@ -11,6 +11,11 @@ public class LibraryResponse {
 		this.message = message;
 	}
 
+	public LibraryResponse(String message) {
+		super();
+		this.message = message;
+	}
+
 	@Override
 	public String toString() {
 		return "LibraryResponse [message=" + message + "]";
