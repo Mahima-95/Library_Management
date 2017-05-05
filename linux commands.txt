@@ -1,0 +1,124 @@
+cat> file name - create new file  cat > mahima.txt
+cat file name - show file data  cat mahima.txt
+cp test.txt mahima.txt  to copy date from one file to another
+
+vi mahima.txt  to edit into this file
+
+wc -c test.txt count character from this file
+wc -w test.txt count words
+wc -l test.txt count lines
+
+grep "hi" mahima.txt  to find "hi" from mahima file.
+grep -c "hi" mahima.txt to find "hi" from mahima file.
+
+grep -l "hi" mahima.txt
+grep -i "hi" mahima.txt
+
+grep -n "hi" mahima.txt
+
+sed 's/unix/linux/p' test.txt it prints the file content
+
+sed 'p' test.txt print file content with duplication
+
+chmod 2 mm.txt give file name here with rights (give write rights)
+chmod 3 mm.txt give file name here with rights (give write, execute rights)
+chmod 4 mm.txt give file name here with rights (give read rights)
+chmod 5 mm.txt give file name here with rights (give read, execute rights)
+chmod 6 mm.txt give file name here with rights (give read,write rights)
+chmod 7 mm.txt give file name here with rights (give read,write, execute rights)
+
+chmod 677 mm.txt give file name here with rights (give rights to user, group and others)
+
+cd mahima give directory name to change it 
+
+cd give it to back to main area
+
+touch mahi.txt  it creates a blank file.
+vi mahi.txt to edit this file.
+
+locate -i *hi* it searches all the file names which have "hi" word.and list down those files.
+
+clear to clear ur recent screen
+
+diff m.txt m1.txt to see the difference between these two files.
+
+$ sort -r names.txt sort in descending order
+$ sort names.txt sort in ascending order
+$ vim +2 filename.txt goto 2 line of file.
+ find ~ -empty finf empty files.
+ 
+ to create a script file.....
+ vi verify.sh
+ 
+ var1="Hi"
+ var2="Hello"
+ echo "$var1 $var2" to print these two variables.
+ 
+ chmod +x verify.sh to run this file
+ ./verify.sh to print the file content
+ **********************************************
+ cretae a file via usng =vi mahima.sh
+ den enter these lines
+ if [ "foo" = "foo" ]; then
+               echo expression evaluated as true
+            else
+               echo expression evaluated as false
+            fi
+then chmod +x mahima.sh to run this file
+ ./mahima.sh to print the file content
+ **********************************************
+ **********************************************
+ same thing as:-
+ create file
+ den enter
+ a = 3
+ b = 2
+ if [ a = b ]; then    it also write as if [ "a" = "b" ]; then 
+               echo true
+            else
+               echo false
+            fi
+  then chmod +x mahima.sh to run this file
+ ./mahima.sh to print the file content
+ **********************************************
+ **************************************
+a="red"
+b="blue"
+c="cryon"
+for Y in "$a" "$b" "$c"
+do
+        echo $Y
+done
+
+for loop now print this file.
+**************************************
+while loop
+X=0
+while [ $X -le 20 ]
+do
+	echo $X
+	X=$((X+1))
+done
+it prints 0123456789 to 20
+***************************
+read -p "Enter number : " n
+if test $n -ge 0
+then
+	echo "$n is positive number."
+else
+	echo "$n number is negative number."
+fi
+
+first it gets number from user.
+then check the condition
+******************************
+read -p "Enter any String : " str
+if test $str -ge "a"
+then
+	echo "$str is same."
+else
+	echo "$str is not same."
+fi
+
+first gets string from user then tally with condition
+**************************************************

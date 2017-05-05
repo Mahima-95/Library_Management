@@ -1,0 +1,23 @@
+1. Data Analysis,
+2. Proper Handling of Data 
+3. Understandable data to custom format.
+In 2003-2004 Google Introduced some new technique in search engine 1. File System GFS (Google File System) and another framework for data analyzing technique called 2. MapReduce to make fast searching and fast analyzing data. Google just submitted theses white paper to search engine.
+******gfs and fast searching and analysing data.
+In 2005-2006 Yahoo take these technique for Google and Implement in single framework given Name Hadoop. Hadoop was created by ___Doug Cutting and Mike Cafarella___ in 2005. 
+
+Hadoop
+http://blog.cloudera.com/blog/2013/05/how-to-configure-eclipse-for-hadoop-contributions/
+
+https://www.tutorialspoint.com/hadoop/hadoop_mapreduce.htm
+
+http://mvnrepository.com/artifact/org.apache.hadoop/hadoop-core/1.2.1
+
+https://www.tutorialspoint.com/hadoop/hadoop_hdfs_overview.htm
+
+http://ercoppa.github.io/HadoopInternals/HadoopArchitectureOverview.html
+
+//to install scala in sts
+http://download.scala-ide.org/sdk/lithium/e46/scala211/stable/site
+
+
+
