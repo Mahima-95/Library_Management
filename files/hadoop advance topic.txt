@@ -31,3 +31,6 @@ A good example for horizontal scaling is Cassandra , MongoDB .. and a good examp
  https://hortonworks.com/hadoop-tutorial/how-to-process-data-with-apache-hive/
  https://hortonworks.com/apache/hive/
  https://www.tutorialspoint.com/hive/hive_introduction.htm
+ http://blog.cask.co/2015/03/schema-on-read-in-action/
+ http://searchdisasterrecovery.techtarget.com/definition/data-replication
+ https://www.dezyre.com/hadoop-tutorial/zookeeper-tutorial
