@@ -1,0 +1,6 @@
+http://www.java67.com/2014/08/difference-between-string-literal-and-new-String-object-Java.html
+http://www.studytonight.com/java/string-handling-in-java
+
+http://www.pskills.org/corejava.jsp
+thread safe string builder or stringbuffer
+Dynamic binding
