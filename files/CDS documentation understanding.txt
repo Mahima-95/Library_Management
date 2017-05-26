@@ -1,0 +1,19 @@
+CDS-Content Data Store 
+it provides storage facility of any type of data
+image, xml, pdf and scanned documents
+manipulate, process manage by CDS storage facilities.
+
+CDS components-
+>ingestion system(Java Web Interface to load data in batch and real time)
+>Agent((its a Tesseract OCR(eletronically extract text from images and reuse it.)(and Tesseract improve OCR process).Agent processes the images, pdfs and scanned documents extract krne kelie and after that store it into HBase
+Load structured data into Hive for aggregations, and Images file will be stored in candidate database, 
+if size of data more than 10MB hai so wo HDFS me store hoga and HBase me uska metadata store hoga.otherwise, if size of data less than 10 MB h to wo direclty HBase MOB data type column store hoga.)
+HBase MOB data type column is Hbase can handle data upto 10MB including binary data like images.
+if HBase handle more than 10MB data so its performance is degraded  because of write amplification caused by splits and compactions..)
+>Image and Data Store(HBase and HDFS)
+>ML (meta language)
+>UI
+>d.	Reporting and Downstream
+downstream is sent summarize aggregated data files to external system 
+reporting system- jha users r directly connected or images ko retrieve krta h based on data fetched to app system.
+

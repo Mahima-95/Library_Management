@@ -1,0 +1,21 @@
+for Map reduce using java api
+
+login with 10.5.3.143
+username - xavient
+password- 1@34567b
+
+pwd
+cd mahima
+deploy jar here
+cd input
+deploy text file here
+
+cd ..
+java -jar mapreduce.jar
+
+cd output
+cat (psomething file name)
+
+
+
+https://www.javacodegeeks.com/2014/04/hadoop-mapreduce-concepts.html

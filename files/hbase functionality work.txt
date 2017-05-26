@@ -1,0 +1,17 @@
+sudo -i
+su hdfs
+hbase shell
+create 'emp' , 'id', 'name'   //to create table 
+list  							// to see all created tables
+scan 'emp'				// to scan table
+is_disabled 'table name'	//to check table is disabled or not
+alter 'emp' , 'name'
+disabe 'emp'
+drop 'emp'
+
+
+create 'emp' , 'personal data'   //to create table 
+put 'emp' , 'row1', 'personal data:id','1' //to create data
+
+ get 'emp', 'row1', 'personal data:name' // to get specific column
+
