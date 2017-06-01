@@ -19,3 +19,5 @@ cat (psomething file name)
 
 
 https://www.javacodegeeks.com/2014/04/hadoop-mapreduce-concepts.html
+http://www.c-sharpcorner.com/UploadFile/051e29/implode-and-explode-function-in-php/
+https://hadoop.apache.org/docs/r1.2.1/mapred_tutorial.html
