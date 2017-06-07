@@ -13,5 +13,11 @@ drop 'emp'
 create 'emp' , 'personal data'   //to create table 
 put 'emp' , 'row1', 'personal data:id','1' //to create data
 
- get 'emp', 'row1', 'personal data:name' // to get specific column
+get 'emp', 'row1', 'personal data:name' // to get specific column
 
+ alter 'emp', 'delete' => 'name'
+alter ‘ table name ’, ‘delete’ ⇒ ‘ column family ’
+
+
+disable_all 'raj.*'
+drop_all 'raj.*'
