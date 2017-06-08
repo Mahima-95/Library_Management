@@ -1,9 +1,0 @@
-All threads must implement the run() method.
-
-When a task invokes its yield() method, it returns to the ready state. 
-The java.lang.Thread.yield() method causes the currently executing thread object to temporarily pause and allow other threads to execute
-
-What is a marker interface??? ans- Marker Interface in java is an interface with no fields or methods within it. It is used to convey to the JVM that the class implementing an interface of this category will have some special behavior. Hence, an empty interface in java is called a marker interface.
-
-http://beginnersbook.com/2013/12/difference-between-arraylist-and-vector-in-java/
-
