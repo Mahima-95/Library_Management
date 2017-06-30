@@ -1,0 +1,8 @@
+input1 = LOAD 'hdfs://xtlinno1vhdtsg1.xavient.com:8020/tmp/Akef/SampleText2.txt' AS (line:chararray);
+words = FOREACH input1 GENERATE FLATTEN (TOKENIZE(line)) as word;
+grouped = GROUP words BY word;
+wordcount = FOREACH grouped GENERATE group, COUNT(words);
+DUMP wordcount;
+
+
+student = LOAD 'hdfs://localhost:9000/pig_data/file.txt' USING PigStorage(',') as ( id:int, firstname:chararray,lastname:chararray, phone:chararray, city:chararray );
