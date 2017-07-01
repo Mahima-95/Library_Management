@@ -1,7 +1,0 @@
-val myfile = sc.textFile("http://quickstart.cloudera:8888/tmp/saprk/input.json")
-
-val counts = myfile.flatMap(line => line.split(" ")).map(word => (word, 1)).reduceByKey(_ + _)
-
-hdfs dfs -put http://quickstart.cloudera:8888/tmp/saprk/input.json
-
-http://quickstart.cloudera:8888/filebrowser/view=/tmp/saprk/input.json
